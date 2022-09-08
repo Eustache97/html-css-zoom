@@ -5,9 +5,24 @@
     box-sizing: border-box;
 }
 img{
+    width: 100%;
     max-width: 100%;
 }
 /* /RESET */
+
+/* COMMON */
+html{
+    font-family: 'Whitney',sans-serif;
+}
+/* /COMMON */
+
+/* UTILITY */
+.txtal{
+    text-align: center;
+    display: inline-block;
+    margin: .5em;
+}
+/* /UTILITY */
 
 /* MAIN */
 .wrapper{
@@ -16,35 +31,86 @@ img{
     /* debug */
     background-color: aquamarine;
 }
-.row-container{
-    height: 90%;
-    width: 100%;
-    padding: 2em;
-    /* debug */
-    background-color: pink;
+.speacker{
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
-.toolbar{
-    height: 10%;
-    width: 100%;
+.speacker span{
+    display: inline-block;
+    color: white;
+    margin: .3em;
     background-color: gray;
+    padding: .2em;
+    font-size: .8em;
 }
+.row-container{
+    height: calc(100% - 50px);
+    width: 100%;
+    padding: 3em 2.5em 1em;
+    position: relative;
+    /* debug */
+    background-color: black;
+}
+
 .row{
     display: flex;
     flex-wrap: wrap;
-    height: 100px;
+    height: 100%;
     width: 100%;
     justify-content: space-between;
     gap: 10px;
+    overflow: auto;
     /* debug */
 }
-.col{
+.row .col{
     width: calc(100% / 7 - 10px);
-    height: 100%;
+    height: 100px;
 }
 .card{
     height: 100%;
     width: 100%;
+    position: relative;
 }
 .card img{
     height: 100%;
 }
+.card span{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(0 , 0, 0, .6);
+}
+/* TOOLBAR */
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 50px;;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(22, 20, 20);
+}
+.toolbar p{
+    font-size: .8em;
+}
+.tools .screen span{
+    color: green;
+    font-size: 2em;
+}
+.txtal span{
+    display: inline-block;
+    font-size: 1.5em;
+}
+.end{
+    background-color: gray;
+    color: red;
+    line-height: 50px;
+    padding: 0 1em;
+} 
+   /* /TOOLBAR */
